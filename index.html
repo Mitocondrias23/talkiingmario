@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>talkingmario.com - AI Interactive Plush</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#930007",
+                        "inverse-primary": "#ffb4aa",
+                        "on-secondary-fixed-variant": "#0b419b",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary": "#715c00",
+                        "surface-tint": "#c0000c",
+                        "primary-container": "#e52521",
+                        "surface-dim": "#d9dadc",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-primary-container": "#ffffff",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "surface-container": "#eeeef0",
+                        "on-secondary-fixed": "#001847",
+                        "tertiary-container": "#cba800",
+                        "tertiary-fixed-dim": "#ebc300",
+                        "surface-container-low": "#f3f3f5",
+                        "on-tertiary-fixed-variant": "#554500",
+                        "on-background": "#1a1c1d",
+                        "outline": "#926f6a",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#e7bdb7",
+                        "surface": "#f9f9fb",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#410001",
+                        "on-secondary-container": "#003484",
+                        "surface-container-highest": "#e2e2e4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#ffdad5",
+                        "secondary": "#305ab4",
+                        "surface-container-high": "#e8e8ea",
+                        "on-surface-variant": "#5d3f3b",
+                        "on-tertiary-container": "#4d3e00",
+                        "on-surface": "#1a1c1d",
+                        "surface-bright": "#f9f9fb",
+                        "inverse-on-surface": "#f0f0f2",
+                        "tertiary-fixed": "#ffe179",
+                        "inverse-surface": "#2f3132",
+                        "secondary-container": "#7ba0ff",
+                        "background": "#f9f9fb",
+                        "surface-variant": "#e2e2e4",
+                        "secondary-fixed": "#dae2ff",
+                        "primary": "#be000c",
+                        "secondary-fixed-dim": "#b1c5ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 70% 30%, #ffdad5 0%, #f9f9fb 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl no-border shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+<div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-600 dark:text-red-500" data-icon="toys">toys</span>
+<span class="text-xl font-extrabold text-red-600 dark:text-red-500 tracking-tighter font-headline">talkingmario.com</span>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-red-600 font-bold font-headline transition-opacity hover:opacity-80" href="#features">Home</a>
+<a class="text-slate-600 dark:text-slate-400 transition-opacity hover:opacity-80" href="#features">Features</a>
+<a class="text-slate-600 dark:text-slate-400 transition-opacity hover:opacity-80" href="#demo">Demo</a>
+<a class="text-slate-600 dark:text-slate-400 transition-opacity hover:opacity-80" href="#faq">FAQ</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-headline font-bold text-sm hover:opacity-80 active:scale-95 transition-all">
+                Buy Now
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative px-6 py-12 md:py-24 overflow-hidden hero-gradient">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10 text-center lg:text-left">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold tracking-widest uppercase font-label">
+                        Limited Edition AI Release
+                    </span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold leading-[1.1] tracking-tight text-on-background mb-6">Meet Mario. He <span class="text-primary">Talks Back.</span></h1><p class="text-xl md:text-2xl font-semibold text-on-surface mb-4">The AI-powered plush that your kids will never put down.</p>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg mb-10 leading-relaxed mx-auto lg:mx-0">
+                        Experience the world's first AI-powered Mario plush. He laughs, talks, and learns with your child using advanced KidSafe™ voice tech.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+<button class="w-full sm:w-auto px-10 py-5 rounded-full font-headline font-bold text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-transform bg-[#E52521] text-white">
+                            Buy Now — S/ 279
+                        </button>
+<button class="w-full sm:w-auto px-10 py-5 bg-white text-on-surface font-headline font-bold text-lg rounded-full hover:bg-surface-container-low transition-colors bg-[#E52521] text-white">
+                            Learn More
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl transform group-hover:scale-110 transition-transform duration-700"></div>
+<img class="relative z-10 w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-xl" data-alt="Premium Mario plush toy sitting on a clean surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhgROoLmFWv7K2akVdpvFTEG5ag3x1zxDnh4wU47r9UqUx939XzIivP3C99BGMAiw_PxhKbC6hk_OVc8t5i-hneGTR6e4F-ciLorQ-klYD5PYWPLvvICQKtYdrK3dOvziiwmEI9wxdxQd7sTVu8lYoN4v_iI8DPI0lN9g57C-2nkohcrBZvzmIzvwydGwbn-7xWqMTsXL9EFHKdle4G1kIRceIIyKTEUW1MS0NhHpJorR1Vmd8UcLimVAQhVI250I1AcVXydeisrHH"/>
+</div>
+</div>
+</section>
+<!-- Video Demo Section -->
+<section class="px-6 py-20 bg-surface-container-low" id="demo">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-3xl md:text-5xl font-headline font-bold mb-12">See the Magic in Action</h2>
+<div class="relative aspect-video bg-surface-container-highest rounded-xl overflow-hidden group shadow-2xl">
+<img class="w-full h-full object-cover opacity-80" data-alt="Child playing happily with a red plush toy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj-V2efk-Ducvqo_JQO4NSDwrkbogfbzRMtoOil263vgbGqMxNpzMIz4Rl1bMaekr1lCgRwPKU4dud-HNLZCrAiufpENL-vJivtUWWregz-SPLCGbj3cmlj9ybOUJyBwgKkXZuHLmMOcFx4T1YRRYzh0N7-54wandPvlxLWz9SkHLx7nC0a15pcI-_OEesAwqFTBl_k1h1qEVev1JDyhf9nC-9YiBQxi9j37ed3OK47FRN3oo8X_7aox24sarTAWI4MfPdIiaFSnwW"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-6 left-6 right-6 text-left">
+<p class="text-white font-headline font-bold text-xl drop-shadow-md">"Wahoo! Let's play together!"</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="px-6 py-24 max-w-7xl mx-auto" id="features">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-4">Powered by Star Power</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">More than just a toy. A companion built with tomorrow's technology.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="p-10 bg-surface-container-lowest rounded-xl shadow-sm hover:scale-[1.02] transition-transform flex flex-col items-center text-center"><div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="forum">forum</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">Real Conversations</h3>
+<p class="text-on-surface-variant leading-relaxed">Powered by AI, Mario responds to questions, tells stories, and jokes.</p></div>
+<!-- Feature 2 -->
+<div class="p-10 bg-surface-container-lowest rounded-xl shadow-sm hover:scale-[1.02] transition-transform flex flex-col items-center text-center border-t-4 border-secondary"><div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="psychology">psychology</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">Always Learning</h3>
+<p class="text-on-surface-variant leading-relaxed">The more your child talks to Mario, the smarter he gets.</p></div>
+<!-- Feature 3 -->
+<div class="p-10 bg-surface-container-lowest rounded-xl shadow-sm hover:scale-[1.02] transition-transform flex flex-col items-center text-center"><div class="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary-container text-3xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">Safe for Kids</h3>
+<p class="text-on-surface-variant leading-relaxed">Designed for ages 4 and up, with child-safe content filters.</p></div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="px-6 py-20 overflow-hidden bg-slate-50">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-4">
+<h2 class="text-3xl md:text-5xl font-headline font-bold">Loved by Families</h2>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold ml-2">4.9/5</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-8 rounded-lg shadow-sm bg-white"><div class="flex gap-1 mb-4"><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span></div>
+<p class="text-lg italic mb-6">"My son hasn't stopped talking to him since his birthday. The AI is surprisingly smart and the voice sounds exactly like the games!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200">
+<img class="w-full h-full object-cover rounded-full" data-alt="Satisfied customer headshot profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAmW50zQQxErN4fumM9XqGoHdmeWlPxGvDwYr7g9-C2BQ7334yDtt5_ej5pn_zaxmhvvZjehsdKdHdZ50OyQ5mzjjTziUre017UJWVFOv3fQwp_wcKyXL3LQZKlrNeguHTYlJWhncLQsLXpYKllhyN0SWJl4Btkg1aku9vgfMi0OzqHvLkzmV49ynOAPuDCkI3Siio28V8kcUBw2GzFn2p5vF2fuQxCRTDxKzfnjRZKgSuBfSv8OK-FxoHwz0YmLoje_4OhGdjnnlX"/>
+</div>
+<div>
+<p class="font-bold">Sarah Jenkins</p>
+<p class="text-sm text-on-surface-variant">Verified Parent</p>
+</div>
+</div>
+</div>
+<div class="p-8 rounded-lg shadow-sm bg-white"><div class="flex gap-1 mb-4"><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span></div>
+<p class="text-lg italic mb-6">"I bought it for my collection, but the quality of the materials is what really impressed me. Premium feel, very soft, and the tech works flawlessly."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200">
+<img class="w-full h-full object-cover rounded-full" data-alt="Satisfied male customer profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALrRS2vP_qWFQTfHquYVFB2uIYtEtGLSlzzcrtlBYKCeXyj4KwPX7EpzB1IBdoVFBuMWNuxWbZReCr5JrMP4P7D5IEa-oo0sMOlKqhKVWfD462UTkZt19t70e0BMMkOi0M-o_adC77pYDvKFbeWwdvKB5wclc_Vf88PbA023ZzyFm_fI0CO6w1RqyE__fR20jUkyHqqRH-XJND1NJE7pyQFx95tpmlpaNfUU3ASKX_FL2G0flncdYsUpv2qD3Py4I7r-QUg0EFYrcR"/>
+</div>
+<div>
+<p class="font-bold">David Rivera</p>
+<p class="text-sm text-on-surface-variant">Nintendo Fan &amp; Collector</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing & Buy -->
+<section class="px-6 py-24 max-w-7xl mx-auto text-center">
+<div class="bg-white rounded-xl p-8 md:p-20 shadow-2xl shadow-slate-200/50 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold mb-4">Ready for Adventure?</h2>
+<p class="text-xl mb-8 text-on-surface-variant">Get your Talking Mario today and start the fun.</p>
+<div class="mb-10">
+<span class="text-5xl font-headline font-bold text-primary">S/ 279</span>
+<span class="text-slate-400 line-through ml-4 text-2xl">S/ 399</span>
+</div>
+<button class="px-12 py-6 bg-primary-container text-on-primary-container rounded-full font-headline font-bold text-xl shadow-2xl hover:scale-105 active:scale-95 transition-all mb-8">
+                    Claim Your Mario Now
+                </button>
+<div class="flex flex-wrap justify-center gap-8 text-sm font-medium text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600">local_shipping</span> Free Express Shipping
+                    </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600">verified</span> 30-Day Money Back Guarantee
+                    </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600">lock</span> Secure Payment
+                    </div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="px-6 py-20 bg-surface" id="faq">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-headline font-bold mb-12 text-center">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<div class="bg-surface-container-low rounded-xl p-6 group cursor-pointer transition-colors hover:bg-surface-container-high">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-lg">Does it require a Wi-Fi connection?</h4>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant leading-relaxed hidden group-focus:block">No! All processing is done locally on the internal AI chip. Mario works perfectly fine offline, keeping your privacy safe.</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 group cursor-pointer transition-colors hover:bg-surface-container-high">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-lg">How long does the battery last?</h4>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant leading-relaxed hidden group-focus:block">Talking Mario features a USB-C rechargeable battery that lasts up to 12 hours of active play on a single charge.</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 group cursor-pointer transition-colors hover:bg-surface-container-high">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-lg">Is it suitable for toddlers?</h4>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant leading-relaxed hidden group-focus:block">Yes, it is designed for kids ages 3 and up. The materials are non-toxic, hypoallergenic, and the internal components are securely encased.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full rounded-t-[3rem] z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md shadow-[0_-10px_40px_rgba(0,0,0,0.06)] px-4 pb-6 pt-2 flex justify-around items-center">
+<a class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-full px-6 py-2 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold font-headline uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:text-red-500 transition-colors" href="#features">
+<span class="material-symbols-outlined" data-icon="magic_button">magic_button</span>
+<span class="text-[10px] font-bold font-headline uppercase tracking-widest mt-1">Features</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:text-red-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="text-[10px] font-bold font-headline uppercase tracking-widest mt-1">AI Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:text-red-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold font-headline uppercase tracking-widest mt-1">Account</span>
+</a>
+</nav>
+<footer class="bg-surface-dim pt-20 pb-32 md:pb-20 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-sm">
+<span class="text-2xl font-extrabold text-primary tracking-tighter font-headline mb-4 block">talkingmario.com</span>
+<p class="text-on-surface-variant mb-6">Bringing joy and innovation to the Mushroom Kingdom, one hug at a time.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h5 class="font-bold mb-4 uppercase text-xs tracking-widest">Product</h5>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Features</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Technology</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Safety</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-4 uppercase text-xs tracking-widest">Support</h5>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h5 class="font-bold mb-4 uppercase text-xs tracking-widest">Newsletter</h5>
+<div class="flex bg-white rounded-full p-1 overflow-hidden shadow-sm">
+<input class="border-none focus:ring-0 text-sm px-4 w-full" placeholder="Email" type="email"/>
+<button class="bg-secondary text-white p-2 rounded-full px-4 text-xs font-bold">Join</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between text-xs text-on-surface-variant gap-4">
+<p>© 2024 talkingmario.com. Not affiliated with Nintendo Co., Ltd. AI powered by KidSafe Intelligence.</p>
+<div class="flex gap-6">
+<a class="hover:underline" href="#">Privacy Policy</a>
+<a class="hover:underline" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>
